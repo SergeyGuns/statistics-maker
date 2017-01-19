@@ -54,7 +54,7 @@ class Statistic {
     console.log('sendInit');
     if (localStorage.length) { 
       let xhr = new XMLHttpRequest()
-      xhr.open('POST', 'http://localhost:3000/statistic/?id_task=2356_' + localStorage.getItem(this._statisticName), true);
+      xhr.open('GET', 'http://localhost:3000/statistic/?id_task=2356_' + localStorage.getItem(this._statisticName), true);
       xhr.setRequestHeader('Access-Control-Allow-Origin', '*'); 
       xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
       xhr.send();
